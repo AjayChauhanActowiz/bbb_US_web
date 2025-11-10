@@ -53,7 +53,7 @@ headers = {
 }
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-token = "f42a5b59aec3467e97a8794c611c436b91589634343"
+token = "token"
 proxyModeUrl = "http://{}:@proxy.scrape.do:8080".format(token)
 proxies = {
     "http": proxyModeUrl,
@@ -70,4 +70,5 @@ response = requests.get(
 )
 print(response.status_code)
 print('Vidal Cafe 2 Inc' in response.text)
+
 print(response.headers)
